@@ -260,5 +260,5 @@ module.exports = {
   performance: {
     hints: false,
   },
-  target: 'electron-main'
+  target: 'electron-renderer'
 };
