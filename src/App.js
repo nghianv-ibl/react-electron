@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { remote } from 'electron';
 
 class App extends Component {
+  constructor() {
+    super();
+    console.log(remote.require('electron'));
+  }
   render() {
     return (
       <div className="App">

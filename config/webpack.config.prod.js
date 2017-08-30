@@ -330,4 +330,5 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
   },
+  target: 'electron-main'
 };
