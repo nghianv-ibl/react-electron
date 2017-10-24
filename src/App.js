@@ -9,8 +9,8 @@ import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 
 const reducer = (state = {}, action) => {
-	if(action.type === 'FETCH_USERS_SUCCESS'){
-		state = {...state, users : action.payload};
+	if (action.type === 'FETCH_USERS_SUCCESS') {
+		state = { ...state, users: action.payload };
 	}
 	return state;
 };
@@ -25,11 +25,11 @@ store.dispatch(dispatch => {
 	dispatch({ type: 'FETCH_USERS_START' });
 	axios.get('http://rest.learncode.academy/api/wstern/users')
 		.then(response => {
-			dispatch({ type: 'FETCH_USERS_SUCCESS' , payload: response.data});
+			dispatch({ type: 'FETCH_USERS_SUCCESS', payload: response.data });
 			console.info(response.data);
 		})
 		.catch(error => {
-			dispatch({ type: 'FETCH_USERS_ERROR' , payload: error.message});
+			dispatch({ type: 'FETCH_USERS_ERROR', payload: error.message });
 		});
 });
 
